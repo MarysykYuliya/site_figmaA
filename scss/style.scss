@@ -48,9 +48,19 @@ nav a.active {
 
 .hero {
   display: flex;
+  flex-wrap: wrap;
   background: #524bad;
   color: white;
   padding: 80px 60px;
+  overflow: hidden;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
 }
 
 .hero-content {
@@ -82,28 +92,36 @@ nav a.active {
   cursor: pointer;
 }
 
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .checkerboard {
   width: 300px;
   height: 300px;
-  background-image: repeating-linear-gradient(
-      45deg,
-      #000 0 25%,
-      #fff 0 50%
-  );
   background-size: 100px 100px;
+}
+
+.checkerboard img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .logos {
   background: #f8f8f8;
   padding: 40px 60px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 150px;
+  margin: 0 auto;
 }
+
+.logos img {
+  height: 60px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+
